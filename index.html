@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🕊️ISLAMI MENU 🕊️</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e6f7e6, #2e8b57);
+            margin: 0;
+            padding: 0;
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #2e8b57;
+            animation: bounce 2s infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .menu-btn {
+            background-color: #2e8b57;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .menu-btn:hover {
+            background-color: #3cb371;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .content {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            min-height: 300px;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .arabic {
+            font-size: 24px;
+            text-align: right;
+            direction: rtl;
+            margin-bottom: 15px;
+            line-height: 1.8;
+            color: #1a5c36;
+            font-weight: bold;
+        }
+        
+        .translation {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .back-btn {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.3s;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .back-btn:hover {
+            background-color: #5a6268;
+            transform: translateY(-2px);
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        h2 {
+            color: #2e8b57;
+            border-bottom: 2px solid #2e8b57;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+        
+        #niat-detail, #surah-detail {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            border: none;
+            padding: 15px 25px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px auto;
+            width: fit-content;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🕊️ISLAMI MENU 🕊️</h1>
+        </header>
+        
+        <div class="menu">
+            <button class="menu-btn" onclick="showPage('niat')">Niat-Niat</button>
+            <button class="menu-btn" onclick="showPage('surat')">Surat-Surat</button>
+            <button class="menu-btn" onclick="showPage('owner')">Owner</button>
+        </div>
+        
+        <!-- Main Menu -->
+        <div class="content" id="main-content">
+            <p style="text-align: center; font-size: 18px;">Selamat datang di Menu Islami. Silakan pilih menu di atas untuk melihat konten.</p>
+            <div style="text-align: center; margin-top: 30px;">
+                <img src="https://i.pinimg.com/originals/0f/c4/8c/0fc48c8a8a24668a5a8a8a0a5a8a8a0a.png" alt="Islamic Pattern" style="max-width: 200px; opacity: 0.7;">
+            </div>
+        </div>
+        
+        <!-- Niat-Niat Page -->
+        <div class="content hidden" id="niat-content">
+            <h2>Niat-Niat Sholat</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                <button class="menu-btn" onclick="showNiat('idul-fitri')">Niat Sholat Idul Fitri</button>
+                <button class="menu-btn" onclick="showNiat('idul-adha')">Niat Sholat Idul Adha</button>
+                <button class="menu-btn" onclick="showNiat('tarawih')">Niat Sholat Tarawih</button>
+            </div>
+            
+            <div id="niat-detail" class="hidden">
+                <div id="idul-fitri-niat" class="hidden">
+                    <div class="arabic">
+                        أُصَلِّي سُنَّةً لعِيْدِ اْلفِطْرِ رَكْعَتَيْنِ مَأْمُوْمًا لِلّٰهِ تَعَــالَى
+                    </div>
+                    <div class="translation">
+                        Ushallî sunnatan li 'îdil fithri rak'ataini ma'mûman lillahi ta'ala.
+                    </div>
+                    <p>Artinya: "Aku niat sholat sunnah Idul Fitri dua rakaat menjadi makmum karena Allah ta'ala."</p>
+                </div>
+                
+                <div id="idul-adha-niat" class="hidden">
+                    <div class="arabic">
+                        أُصَلِّيْ سُنَّةً لعِيْدِ اْلأَضْحَى رَكْعَتَيْنِ لِلهِ تَعَــــــــالَى
+                    </div>
+                    <p>Artinya: "Aku niat sholat sunnah Idul Adha dua rakaat menjadi makmum karena Allah ta'ala."</p>
+                </div>
+                
+                <div id="tarawih-niat" class="hidden">
+                    <div class="arabic">
+                        أُصَلِّي سُنَّةَ التَّرَاوِيحِ رَكْعَتَيْنِ مَأْمُومًا لِلَّهِ تَعَالَى
+                    </div>
+                    <div class="translation">
+                        Usholli sunnatat tarowihi rok'ataini ma'muman lillahi ta'ala.
+                    </div>
+                    <p>Artinya: "Aku niat sholat sunnah tarawih dua rakaat sebagai makmum karena Allah Ta'ala."</p>
+                </div>
+                
+                <button class="back-btn" onclick="backToNiatMenu()">Kembali</button>
+            </div>
+            
+            <button class="back-btn" onclick="backToMain()">Kembali ke Menu Utama</button>
+        </div>
+        
+        <!-- Surat-Surat Page -->
+        <div class="content hidden" id="surat-content">
+            <h2>Surat-Surat Pendek</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+                <button class="menu-btn" onclick="showSurah('fatihah')">Surah Al-Fatihah</button>
+                <button class="menu-btn" onclick="showSurah('nas')">Surah An-Nas</button>
+                <button class="menu-btn" onclick="showSurah('ikhlas')">Surah Al-Ikhlas</button>
+            </div>
+            
+            <div id="surah-detail" class="hidden">
+                <div id="fatihah-surah" class="hidden">
+                    <div class="arabic">
+                        ١ – بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>
+                        ٢ – اَلْحَمْدُ لِلّٰهِ رَبِّ الْعٰلَمِيْنَۙ<br><br>
+                        ٣ – الرَّحْمٰنِ الرَّحِيْمِۙ<br><br>
+                        ٤ – مٰلِكِ يَوْمِ الدِّيْنِۗ<br><br>
+                        ٥ – اِيَّاكَ نَعْبُدُ وَاِيَّاكَ نَسْتَعِيْنُۗ<br><br>
+                        ٦ – اِهْدِنَا الصِّرَاطَ الْمُسْتَقِيْمَ<br><br>
+                        ٧ – صِرَاطَ الَّذِيْنَ اَنْعَمْتَ عَلَيْهِمْ ەۙ غَيْرِ الْمَغْضُوْبِ عَلَيْهِمْ وَلَا الضَّاۤلِّيْنَ
+                    </div>
+                </div>
+                
+                <div id="nas-surah" class="hidden">
+                    <div class="arabic">
+                        ١ – بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>
+                        ٢ – قُلْ أَعُوذُ بِرَبِّ النَّاسِ<br><br>
+                        ٣ – مَلِكِ النَّاسِ<br><br>
+                        ٤ – إِلَٰهِ النَّاسِ<br><br>
+                        ٥ – مِنْ شَرِّ الْوَسْوَاسِ الْخَنَّاسِ<br><br>
+                        ٦ – الَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ<br><br>
+                        ٧ – مِنَ الْجِنَّةِ وَالنَّاسِ
+                    </div>
+                </div>
+                
+                <div id="ikhlas-surah" class="hidden">
+                    <div class="arabic">
+                        ١ – بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ<br><br>
+                        ٢ – قُلْ هُوَ اللّٰهُ أَحَدٌ<br><br>
+                        ٣ – اللّٰهُ الصَّمَدُ<br><br>
+                        ٤ – لَمْ يَلِدْ وَلَمْ يُولَدْ<br><br>
+                        ٥ – وَلَمْ يَكُنْ لَّهُۥ كُفُوًا أَحَدٌۢ
+                    </div>
+                </div>
+                
+                <button class="back-btn" onclick="backToSurahMenu()">Kembali</button>
+            </div>
+            
+            <button class="back-btn" onclick="backToMain()">Kembali ke Menu Utama</button>
+        </div>
+        
+        <!-- Owner Page -->
+        <div class="content hidden" id="owner-content">
+            <h2>Hubungi Owner</h2>
+            <div style="text-align: center;">
+                <p style="font-size: 18px; margin-bottom: 30px;">Klik tombol di bawah ini untuk langsung menghubungi Owner via WhatsApp:</p>
+                
+                <a href="https://wa.me/6283175501824" target="_blank" class="whatsapp-btn">
+                    <img src="https://cdn-icons-png.flaticon.com/512/220/236.png" alt="WhatsApp" style="width: 30px;">
+                    Chat via WhatsApp
+                </a>
+                
+                <p style="font-size: 16px; margin-top: 20px;">Nomor WhatsApp: <strong>6283175501824</strong></p>
+            </div>
+            <button class="back-btn" onclick="backToMain()">Kembali ke Menu Utama</button>
+        </div>
+    </div>
+    
+    <script>
+        function showPage(page) {
+            // Hide all content divs
+            document.getElementById('main-content').classList.add('hidden');
+            document.getElementById('niat-content').classList.add('hidden');
+            document.getElementById('surat-content').classList.add('hidden');
+            document.getElementById('owner-content').classList.add('hidden');
+            
+            // Show selected page
+            document.getElementById(page + '-content').classList.remove('hidden');
+            
+            // Hide any detail views if they're open
+            document.getElementById('niat-detail').classList.add('hidden');
+            document.getElementById('surah-detail').classList.add('hidden');
+            
+            // Jika halaman owner, langsung buka WhatsApp setelah 1 detik
+            if (page === 'owner') {
+                setTimeout(function() {
+                    window.open('https://wa.me/6283175501824', '_blank');
+                }, 1000);
+            }
+        }
+        
+        function showNiat(niat) {
+            // Hide all niat details
+            document.getElementById('idul-fitri-niat').classList.add('hidden');
+            document.getElementById('idul-adha-niat').classList.add('hidden');
+            document.getElementById('tarawih-niat').classList.add('hidden');
+            
+            // Show selected niat
+            document.getElementById(niat + '-niat').classList.remove('hidden');
+            
+            // Show niat detail container
+            document.getElementById('niat-detail').classList.remove('hidden');
+        }
+        
+        function showSurah(surah) {
+            // Hide all surah details
+            document.getElementById('fatihah-surah').classList.add('hidden');
+            document.getElementById('nas-surah').classList.add('hidden');
+            document.getElementById('ikhlas-surah').classList.add('hidden');
+            
+            // Show selected surah
+            document.getElementById(surah + '-surah').classList.remove('hidden');
+            
+            // Show surah detail container
+            document.getElementById('surah-detail').classList.remove('hidden');
+        }
+        
+        function backToMain() {
+            showPage('main');
+        }
+        
+        function backToNiatMenu() {
+            document.getElementById('niat-detail').classList.add('hidden');
+        }
+        
+        function backToSurahMenu() {
+            document.getElementById('surah-detail').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
